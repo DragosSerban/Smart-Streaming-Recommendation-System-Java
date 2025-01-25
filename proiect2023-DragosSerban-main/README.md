@@ -16,7 +16,7 @@ id: Unique integer ID.
 name: Name of the streamer.
 
 #### Streams
-File: streams.csv
+##### File: streams.csv
 Each line contains:
 streamType: Integer representing the type of stream (1 - song, 2 - podcast, 3 - audiobook).
 id: Unique integer ID.
