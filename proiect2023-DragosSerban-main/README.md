@@ -8,14 +8,14 @@ The application reads input data from CSV files, processes commands from a text 
 
 ### Input Data
 
-1. Streamers
+#### Streamers
 File: streamers.csv
 Each line contains:
 streamerType: Integer representing the type of streamer (1 - musician, 2 - podcast host, 3 - audiobook author).
 id: Unique integer ID.
 name: Name of the streamer.
 
-2. Streams
+#### Streams
 File: streams.csv
 Each line contains:
 streamType: Integer representing the type of stream (1 - song, 2 - podcast, 3 - audiobook).
@@ -27,7 +27,7 @@ length: Duration in seconds.
 dateAdded: Unix timestamp of when the stream was added.
 name: Name of the stream.
 
-4. Users
+#### Users
 File: users.csv
 Each line contains:
 id: Unique integer ID.
@@ -45,6 +45,7 @@ Displays a JSON-formatted list of a streamer's streams, including fields like id
 Delete Stream
 Format: <streamerId> DELETE <streamId>
 Removes a stream from the application. Updates data but does not produce console output.
+
 #### User Commands
 List User History
 Format: <userId> LIST
@@ -59,16 +60,16 @@ Surprise Recommendation
 Format: <userId> SURPRISE [SONG | PODCAST | AUDIOBOOK]
 Displays up to 3 recently added streams from unlistened creators of the specified type.
 
-### ArchitectureDesign patterns
+### Design patterns
 The application implements several design patterns:
 
-1. Factory Pattern:
+#### Factory Pattern:
 Used to create instances of Streamer, Stream, and commands. Centralizes object creation logic.
-2. Singleton Pattern:
+#### Singleton Pattern:
 Ensures that classes like StreamerFactory, StreamFactory, and Data have only one instance throughout the application's lifecycle.
-3. Command Pattern:
+#### Command Pattern:
 Encapsulates commands as objects, allowing for flexible and reusable command execution.
-4. Iterator Pattern:
+#### Iterator Pattern:
 Provides a standardized way to iterate through streams for recommendation algorithms (e.g., top 5 streams by listens or top 3 recently added streams).
-5. Observer Pattern:
+#### Observer Pattern:
 Updates related entities (e.g., incrementing listen counts when a user listens to a stream) to maintain consistency.
