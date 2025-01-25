@@ -37,28 +37,28 @@ The application reads input data from CSV files, processes commands from a text 
 ### Commands
 #### Streamer Commands
 ##### Add Stream
-##### Format: <streamerId> ADD <streamType> <id> <streamGenre> <length> <name>
-##### Adds a stream for a given streamer. Updates application data but does not produce console output.
+Format: <streamerId> ADD <streamType> <id> <streamGenre> <length> <name>
+Adds a stream for a given streamer. Updates application data but does not produce console output.
 ##### List Streams
-##### Format: <streamerId> LIST
-##### Displays a JSON-formatted list of a streamer's streams, including fields like id, name, length (formatted as HH:MM:SS or MM:SS), and dateAdded.
+Format: <streamerId> LIST
+Displays a JSON-formatted list of a streamer's streams, including fields like id, name, length (formatted as HH:MM:SS or MM:SS), and dateAdded.
 ##### Delete Stream
-##### Format: <streamerId> DELETE <streamId>
-##### Removes a stream from the application. Updates data but does not produce console output.
+Format: <streamerId> DELETE <streamId>
+Removes a stream from the application. Updates data but does not produce console output.
 
 #### User Commands
 ##### List User History
-##### Format: <userId> LIST
-##### Displays a JSON-formatted list of streams the user has listened to.
+Format: <userId> LIST
+Displays a JSON-formatted list of streams the user has listened to.
 ##### Listen to Stream
-##### Format: <userId> LISTEN <streamId>
-##### Updates the user's history and increments the stream's listen count.
+Format: <userId> LISTEN <streamId>
+Updates the user's history and increments the stream's listen count.
 ##### Recommend Streams
-##### Format: <userId> RECOMMEND [SONG | PODCAST | AUDIOBOOK]
-##### Displays up to 5 unlistened streams with the highest listen counts for the specified type, from creators the user has already listened to.
+Format: <userId> RECOMMEND [SONG | PODCAST | AUDIOBOOK]
+Displays up to 5 unlistened streams with the highest listen counts for the specified type, from creators the user has already listened to.
 ##### Surprise Recommendation
-##### Format: <userId> SURPRISE [SONG | PODCAST | AUDIOBOOK]
-##### Displays up to 3 recently added streams from unlistened creators of the specified type.
+Format: <userId> SURPRISE [SONG | PODCAST | AUDIOBOOK]
+Displays up to 3 recently added streams from unlistened creators of the specified type.
 
 ### Design patterns
 The application implements several design patterns:
