@@ -17,15 +17,15 @@ name: Name of the streamer.
 
 #### Streams
 ##### File: streams.csv
-Each line contains:
-streamType: Integer representing the type of stream (1 - song, 2 - podcast, 3 - audiobook).
-id: Unique integer ID.
-streamGenre: Genre of the stream (varies by stream type).
-noOfStreams: Long integer for the total number of listens.
-streamerId: ID of the associated streamer.
-length: Duration in seconds.
-dateAdded: Unix timestamp of when the stream was added.
-name: Name of the stream.
+##### Each line contains:
+###### streamType: Integer representing the type of stream (1 - song, 2 - podcast, 3 - audiobook).
+###### id: Unique integer ID.
+###### streamGenre: Genre of the stream (varies by stream type).
+###### noOfStreams: Long integer for the total number of listens.
+###### streamerId: ID of the associated streamer.
+###### length: Duration in seconds.
+###### dateAdded: Unix timestamp of when the stream was added.
+###### name: Name of the stream.
 
 #### Users
 File: users.csv
